@@ -1,0 +1,22 @@
+
+
+
+//////////////////////////////////////////////////////////////
+// The fsbl has been modified to continue reading sectors until the load address is detected as 
+// 0xFFFFFFF0 so cpu1_bootvec.bin has to be last in the image. Also, the first non-bootloader sector,
+// that also isn't a bit file, is the app that will be ran once fsbl completes.
+//
+
+the_ROM_image:
+{
+
+	[bootloader] amp_fsbl.elf
+               system.bit
+	             u-boot.elf
+	             app_cpu1.elf
+
+  //write start vector address 0xFFFFFFF0 with 0xFFFFFF00
+  //This load address triggers fsbl to continue
+  //[load = 0xFFFFFFF0] cpu1_bootvec.bin
+}
+
