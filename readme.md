@@ -12,15 +12,15 @@ CPU0 runs linux ; CPU1 runs standalone code to blink a led.
 And every CPU can communicate with the other through shared memory.
 ### Lab info ###
 
-Vivado : 2015.2
+- Vivado : 2015.2
 
-linux kernel : 2014.4
+- Linux kernel : 2014.4
 
-Rootfs :  linaro
+- Rootfs :  linaro
 
-u-boot : 2015.01
+- U-boot : 2015.01
 
-board : ZYBO
+- Board : ZYBO
 
 
 ## Work flow##
